@@ -530,6 +530,10 @@ header {
         height: 90%;
         width: 90%;
     }
+    .portfolio__img:hover,
+    .portfolio__item:focus .portfolio__img {
+        transform: scale(1.15);
+    }
     .btn {
         font-size: 1.5rem;
         letter-spacing: 12px;
