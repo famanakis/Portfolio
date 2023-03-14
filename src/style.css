@@ -16,6 +16,9 @@
     
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
+
+    --bs-secondary: 0.25em 0.25em 0.75em 0.25em #000000,
+                    0.125em 0.125em 0.25em #000000;
 }
 
 *,
@@ -321,9 +324,10 @@ header {
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
     object-fit: cover;
-    height: 25%;
-    width: 75%;
+    height: 80%;
+    width: 80%;
     margin: 10% auto;
+    box-shadow: var(--bs-secondary);
 }
 
 .portfolio__item:focus {
@@ -525,10 +529,11 @@ header {
     .portfolio_img_div {
         display: grid;
         grid-template-columns: repeat(3, minmax(150px, 1fr));
+        gap: 2em;
     }
     .portfolio__img  {
-        height: 90%;
-        width: 90%;
+        height: 100%;
+        width: 100%;
     }
     .portfolio__img:hover,
     .portfolio__item:focus .portfolio__img {
