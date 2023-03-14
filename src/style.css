@@ -49,6 +49,11 @@ a {
     text-decoration: none;
     font-family: inherit;
     color: inherit;
+    transition: transform 200ms ease-in-out;
+}
+
+a:hover {
+    transform: scale(1.1);
 }
 
 strong { font-weight: var(--fw-bold) }
