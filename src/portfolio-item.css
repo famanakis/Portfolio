@@ -64,7 +64,6 @@ a:hover {
 .grid {
     display: grid;
     grid-template-columns: 100%;
-    /* grid-gap: 10px; */
     background-color: white;
     margin: 5% auto;
 }
@@ -79,13 +78,11 @@ img {
 .bottom-section {
     display: grid;
     grid-template-columns: 100%;
-    /* grid-gap: 10px; */
 }
   
 .middle-section {
     display: grid;
     grid-template-columns: 100%;
-    /* grid-gap: 10px; */
 }
 
 .middle-section .left-column {
@@ -150,10 +147,6 @@ img {
   
 /* Media queries for smaller screens */
 @media (min-width: 1020px) {
-  body {
-    margin-bottom: 5%;
-  }
-
   html {
       font-size: 2rem;
   }
@@ -162,8 +155,19 @@ img {
     font-size: 3rem;
   }
 
+  p {
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 0;
+  }
+
   .grid {
       grid-template-rows: repeat(3, 1fr);
+      margin: 0;
   }
 
   .top-section,
@@ -197,6 +201,12 @@ img {
   .right-column {
     background-color: inherit;
   }
+
+.left-column p,
+.right-column  p {
+    text-align: left;
+    margin: 0 auto;
+}
 
   img {
       width: 80%;
