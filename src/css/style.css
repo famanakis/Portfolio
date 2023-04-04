@@ -220,7 +220,7 @@ header {
 .hamburger::after {
     background: var(--light-blue);
     width: 2em;
-    height: 3px;
+    height: 3.5px;
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
 }
