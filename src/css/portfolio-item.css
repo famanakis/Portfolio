@@ -150,76 +150,85 @@ img {
   
 /* Media queries for smaller screens */
 @media (min-width: 1020px) {
-  html {
-      font-size: 2rem;
-  }
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  p {
-    line-height: 1.5;
-    letter-spacing: 1px;
-  }
-
-  .container {
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .grid {
-      grid-template-rows: repeat(3, 1fr);
-      margin: 0;
-  }
-
-  .top-section,
-  .bottom-section {
-    grid-template-columns: 35% 65%;
-  }
-
-  .middle-section .left-column {
-      order: 0;
+    html {
+        font-size: 1.5rem;
     }
 
-  .middle-section {
-    grid-template-columns: 65% 35%;
-
-  }
-
-  .middle-section .right-column {
-      order: 2;
+    header {
+        padding: 0 0 2em 0;
     }
 
-  .top-section,
-  .bottom-section {
-    background-color: blue;
-    padding: 1em 0 1em 1.5em;
-    align-items: center;
-  }
+    h1 {
+        font-size: 3rem;
+    }
 
-  .middle-section {
-    background-color: purple;
-    padding: 1em 1.5em 1em 0;
-    align-items: center;
-  }
+    p {
+        line-height: 1.5;
+        letter-spacing: 1px;
+    }
 
-  .left-column,
-  .right-column {
-    background-color: inherit;
-  }
+    .container {
+        max-width: 100%;
+        margin: 0;
+    }
 
-.left-column p,
-.right-column  p {
-    font-size: .75rem;
-    text-align: left;
-    margin: 0 auto;
-}
+    .grid {
+        grid-template-rows: repeat(3, 1fr);
+        margin: 0;
+    }
+
+    .top-section,
+    .bottom-section {
+        grid-template-columns: 35% 65%;
+    }
+
+    .middle-section .left-column {
+        order: 0;
+    }
+
+    .middle-section {
+        grid-template-columns: 65% 35%;
+    }
+
+    .middle-section .right-column {
+        order: 2;
+    }
+
+    .top-section,
+    .bottom-section {
+        background-color: blue;
+        padding: 1em 0 1em 1.5em;
+        align-items: center;
+    }
+
+    .middle-section {
+        padding: 1em 1.5em 1em 0;
+        align-items: center;
+    }
+
+    .left-column,
+    .right-column {
+        background-color: inherit;
+    }
+
+    .left-column p,
+    .right-column  p {
+        text-align: left;
+        width: 85%;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: .12rem;
+        word-spacing: .16rem;
+    }
 
   img {
-      width: 100%;
-      margin: 15%;
-}
+        width: 100%;
+        margin: 15%;
+    }
+
+    .social-list {
+        margin: 1em 0 0;
+    }
 
 }
   
