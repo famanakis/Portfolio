@@ -5,9 +5,15 @@
     --fw-reg: 400;
     --fw-bold: 700;
     
-    --color-light: #fff;
-    --color-dark: #303030;
-    --color-accent: #3F83F8;
+    --white: #ffffff;
+    --background: #f9f9f9;
+    --light-gray: #e7ecef;
+    --gray: #8b8c89;
+    --light-blue: #6096ba;
+    --blue: #274c77;
+    --sky: #a3cef1;
+    --sand: #ffeedd;
+    --dark-blue: #022b3a;
     
     --fs-h1: 3.5rem;
     --fs-h2: 2.5rem;
@@ -17,8 +23,8 @@
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
 
-    --bs-secondary: 0.25em 0.25em 0.75em 0.25em #000000,
-                    0.125em 0.125em 0.25em #000000;
+    --bs-secondary: 0.25em 0.25em 0.75em 0.25em var(--dark-blue),
+                    0.125em 0.125em 0.25em var(--dark-blue);
 }
 
 *,
@@ -28,8 +34,8 @@
 }
 
 body {
-    background: var(--color-light);
-    color: var(--color-dark);
+    background: var(--white);
+    color: var(--blue);
     margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
@@ -58,17 +64,12 @@ a:hover {
 
 strong { font-weight: var(--fw-bold) }
 
-:focus {
-    outline: 3px solid var(--color-accent);
-    outline-offset: 3px;
-}
-
 /* Buttons */
 .btn {
     display: inline-block;
     padding: 1em 2.5em;
-    background: var(--color-accent);
-    color: var(--color-light);
+    background: var(--blue);
+    color: var(--light-gray);
     text-decoration: none;
     cursor: pointer;
     font-size: 1rem;
@@ -94,6 +95,9 @@ h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
 
+.service h3 {
+    font-size: 3rem;
+}
 
 .section__title {
     margin-bottom: .25em;
@@ -115,15 +119,15 @@ h3 { font-size: var(--fs-h3) }
 
 .section__subtitle--intro,
 .section__subtitle--about {
-    background: var(--color-accent);
+    background: var(--blue);
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
-    color: var(--color-light);
+    color: var(--light-gray);
 }
 
 .section__subtitle--work {
-    color: var(--color-accent);
+    color: var(--blue);
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
 }
@@ -141,8 +145,8 @@ header {
 
 .nav {
     position: fixed;
-    background: var(--color-dark);
-    color: var(--color-light);
+    background: var(--dark-blue);
+    color: var(--light-gray);
     top: 0;
     bottom: 0;
     left: 0;
@@ -172,11 +176,11 @@ header {
 }
 
 .nav__link:hover {
-    color: var(--color-accent);
+    border-bottom: 3px solid var(--light-gray);
 }
 
 .nav-toggle {
-    padding: .5em;
+    padding: .75em;
     background: transparent;
     border: 0;
     cursor: pointer;
@@ -214,7 +218,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--color-accent);
+    background: var(--light-blue);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -244,21 +248,21 @@ header {
 
 .section__subtitle--intro {
     display: inline-block;
-    color: var(--color-light);
+    color: var(--white);
 }
 
 /*  My services section  */
 .my-services {
-    background-color: var(--color-dark);
+    background-color: var(--light-gray);
     background-image: url(../img/services-bg7.jpg);
     background-size: cover;
-    /* background-blend-mode: normal; */
-    color: var(--color-light);
+    background-blend-mode: normal;
+    color: var(--blue);
     text-align: center;
 }
 
 .section__title--services {
-    color: var(--color-light);
+    color: var(--blue);
     position: relative;
 }
 
@@ -268,7 +272,7 @@ header {
     width: 2em;
     height: 1px;
     margin: 0.5em auto 1em;
-    background: var(--color-light);
+    background: var(--light-gray);
     opacity: 0.25;
 }
 
@@ -277,7 +281,6 @@ header {
 }
 
 .service {
-    max-width: 400px;
     margin: 0 auto 2em;
 }
 
@@ -292,8 +295,8 @@ header {
 
 /* My Work */
 .my-work {
-    background-color: var(--color-dark);
-    color: var(--color-light);
+    background-color: var(--light-gray);
+    color: var(--blue);
     text-align: center;    
 }
 
@@ -313,13 +316,13 @@ header {
 .portfolio h3:after {
     content: '';
     display: block;
-    border-top: 3px solid var(--color-light);
+    border-top: 3px solid var(--blue);
     border-radius: 4px;
     margin-top: 0.5em;
 }
 
 .portfolio__item {
-    background: var(--color-accent);
+    background: var(--blue);
     overflow: hidden;
 
 }
@@ -351,30 +354,22 @@ header {
 
 /* footer */
 .footer {
-    background: #111;
-    color: var(--color-accent);
+    background: var(--dark-blue);
+    color: var(--light-gray);
     text-align: center;
     padding: 2.5em 0;
     font-size: var(--fs-h3);
-
 }
 
 .footer a { 
     color: inherit;
     text-decoration: none;
+    opacity: .7;
 }
 
 .footer__link {
     font-weight: var(--fw-bold);
-}
-
-.footer__link:hover,
-.social-list__link:hover {
-    opacity: .7;
-}
-
-.footer__link:hover {
-    text-decoration: underline;
+    transition: all 200ms ease-in-out;
 }
 
 .social-list {
@@ -387,10 +382,19 @@ header {
 
 .social-list__item {
     margin: 0 .5em;
+    transition: all 200ms ease-in-out;
 }
 
 .social-list__link {
     padding: .5em;
+    transition: all 200ms ease-in-out;
+}
+
+.footer__link:hover,
+.social-list__link:hover,
+.social-list__item:hover {
+    opacity: 1;
+    transform: scale(1.3);
 }
 
 
@@ -421,8 +425,8 @@ header {
 .portfolio-item-individual a {
     margin-right: 0.8em;
     font-size: 1rem;
-    border: 1px solid var(--color-dark);
-    color: var(--color-dark);
+    border: 1px solid var(--gray);
+    color: var(--gray);
     padding: 0.25em 1em;
     text-decoration: none;
 
@@ -447,7 +451,7 @@ header {
         min-width: 250px;
         position: relative;
         z-index: 2;
-    }    
+    }   
     
     .section__subtitle--intro {
         align-self: start;
@@ -499,19 +503,9 @@ header {
     }
     .services {
         display: flex;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
+        gap: 2em;
     }
     
-    .service + .service {
-        margin-left: 6em;
-    }
-
-    .service {
-        margin-bottom: 0;
-        max-width: 600px;
-    }
 }
 
 @media (min-width: 1020px) {
@@ -520,12 +514,6 @@ header {
         --fs-h2: 4.75rem;
         --fs-h3: 2.5rem;
         --fs-body: 1.875rem;
-    }
-    .services {
-        max-width: 90%;
-    }
-    .service {
-        max-width: 700px;
     }
     .about-me {
         max-width: 85%;
