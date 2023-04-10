@@ -254,16 +254,17 @@ header {
 
 /*  My services section  */
 .my-services {
-    background-color: var(--light-gray);
-    background-image: url(../img/services-bg7.jpg);
+    background-color: var(--blue);
+    background-image: url(../assets/images/computer-background.jpg);
+    background-blend-mode: darken;
     background-size: cover;
-    background-blend-mode: normal;
-    color: var(--blue);
+    color: var(--light-gray);
+    text-shadow: 0 0 1px #000000;
     text-align: center;
 }
 
 .section__title--services {
-    color: var(--blue);
+    color: var(--light-gray);
     position: relative;
 }
 
@@ -274,7 +275,7 @@ header {
     height: 1px;
     margin: 0.5em auto 1em;
     background: var(--light-gray);
-    opacity: 0.25;
+    opacity: 0.5;
 }
 
 .services {
@@ -283,6 +284,10 @@ header {
 
 .service {
     margin: 0 auto 2em;
+}
+
+.service p {
+    text-align: justify;
 }
 
 .section__subtitle--about {
@@ -303,8 +308,12 @@ header {
 
 /* My Work */
 .my-work {
-    background-color: var(--light-gray);
+    background-color: var(--sand);
+    background-image: url(../assets/images/marble-background.jpg);
+    background-size: cover;
+    background-blend-mode: normal;
     color: var(--blue);
+    text-shadow: 0 0 1px var(--white);
     text-align: center;    
 }
 
@@ -524,7 +533,7 @@ header {
         --fs-h1: 5.5rem;
         --fs-h2: 4.75rem;
         --fs-h3: 2.5rem;
-        --fs-body: 1.875rem;
+        --fs-body: 1.65rem;
     }
     .about-me {
         max-width: 85%;
@@ -559,5 +568,8 @@ header {
     }
     .intro__img {
         margin-bottom: 7em;
+    }
+    .services h3 {
+        font-size: 3rem;
     }
 }
