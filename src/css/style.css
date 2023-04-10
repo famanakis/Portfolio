@@ -249,7 +249,7 @@ header {
 .section__subtitle--intro {
     display: inline-block;
     color: var(--white);
-    margin-left: .5em;
+    margin-left: .5em;s
 }
 
 /*  My services section  */
@@ -516,8 +516,7 @@ header {
     .services {
         display: flex;
         gap: 2em;
-    }
-    
+    }    
 }
 
 @media (min-width: 1020px) {
@@ -557,5 +556,8 @@ header {
         font-size: 1.5rem;
         letter-spacing: 12px;
         padding: 1.25em 3em;
+    }
+    .intro__img {
+        margin-bottom: 7em;
     }
 }
